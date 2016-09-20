@@ -17,9 +17,9 @@ while(intro == 1) {
     console.log('user entered an invalid responce.');
   }
 }
-var totalRight;
-var totalWrong;
-var games;
+var totalRight = 0;
+var totalWrong = 0;
+var games = 0;
 while(playing == 1) {
   games += 1;
   var right = 0;
