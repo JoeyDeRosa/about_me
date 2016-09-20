@@ -34,7 +34,7 @@ while(playing == 1) {
       q = 0;
       console.log('user got the first question right.');
     } else if (question == 'n' || question == 'no') {
-      alert('Ohhhhhh, that is ufortunatly wrong. I was born in Tacoma Washington.');
+      alert('Ohhhhhh, that is unfortunatly wrong. I was born in Tacoma Washington.');
       wrong += 1;
       totalWrong += 1;
       q = 0;
@@ -126,7 +126,7 @@ while(playing == 1) {
   }
   alert('Wow, that was fun!');
   alert('this game you got ' + right + ' right and ' + wrong + ' wrong.');
-  alert('In ' + games + ' games you have '+ totalRight + ' right and ' + totalWrong + ' wrong.');
+  alert('In ' + games + ' game(s) you have '+ totalRight + ' right and ' + totalWrong + ' wrong.');
   q = 1;
   while(q == 1) {
     var question = prompt('Would you like to play again? y/n');
