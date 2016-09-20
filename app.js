@@ -4,6 +4,7 @@ while(intro == 1) {
   var play = prompt('Do you want to play a guessing game y/n.').toLowerCase();
   if(play == 'y' || play == 'yes') {
     alert('Fantastic lets get started!');
+    alert('I am pleased to welcome you to this fantastic game all about me, your score will be tracked and you can play as many times as you like.');
     playing = 1;
     intro = 0;
     console.log('user wants to play.');
@@ -16,7 +17,6 @@ while(intro == 1) {
     console.log('user entered an invalid responce.');
   }
 }
-alert('I am pleased to welcome you to this fantastic game all about me, your score will be tracked and you can play as many times as you like.');
 var totalRight;
 var totalWrong;
 var games;
@@ -144,5 +144,5 @@ while(playing == 1) {
       console.log('user entered an invalid responce.');
     }
   }
-  alert('Farewell, I hope you enjoy the site.');
 }
+alert('Farewell, I hope you enjoy the site.');
