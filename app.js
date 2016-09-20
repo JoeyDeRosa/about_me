@@ -38,7 +38,7 @@ while(playing == 1) {
       wrong += 1;
       totalWrong += 1;
       q = 0;
-      console.log('user got the second question wrong.');
+      console.log('user got the first question wrong.');
     } else {
       alert('I\'m afraid that is not an answer, try again.');
       console.log('user entered an invalid responce.');
