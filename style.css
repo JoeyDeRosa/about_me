@@ -5,6 +5,7 @@ header {
 h1 {
   color: white;
   text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif
 }
 
 article {
@@ -14,14 +15,19 @@ article {
 h2 {
   color: white;
   text-align: right;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 p {
   color: white;
   text-align: right;
+  font-family: "Comic Sans MS", cursive, sans-serif
 }
+
  img {
-   height: 200px;
+   height: 250px;
    width: 400px;
-   
+   transform: rotate(270deg);
+   position: relative;
+   top: 100px;
  }

@@ -1,3 +1,4 @@
+'use strict';
 var playing = 0;
 var intro = 1;
 while(intro == 1) {
