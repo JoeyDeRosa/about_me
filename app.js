@@ -6,7 +6,7 @@ while(intro == 1) {
     alert('Fantastic lets get started!');
     playing = 1;
     intro = 0;
-    console.log('user want\'s to play.');
+    console.log('user wants to play.');
   } else if (play == 'n' || play == 'no') {
     alert('Well that is a bummer, that\'s all this site was made for.');
     intro = 0;
@@ -17,9 +17,11 @@ while(intro == 1) {
   }
 }
 alert('I am pleased to welcome you to this fantastic game all about me, your score will be tracked and you can play as many times as you like.');
-var totalRight = 0
-var totalWrong = 0;
+var totalRight;
+var totalWrong;
+var games;
 while(playing == 1) {
+  games += 1;
   var right = 0;
   var wrong = 0;
   var q = 1;
@@ -121,7 +123,26 @@ while(playing == 1) {
       alert('I\'m afraid that is not an answer, try again.');
       console.log('user entered an invalid responce.');
     }
-    
   }
-
+  alert('Wow, that was fun!');
+  alert('this game you got ' + right + ' right and ' + wrong + ' wrong.');
+  alert('In ' + games + ' games you have '+ totalRight + ' right and ' + totalWrong + ' wrong.');
+  q = 1;
+  while(q == 1) {
+    var question = prompt('Would you like to play again? y/n');
+    if(question == 'y' || question == 'yes') {
+      alert('Awsome lets get started!');
+      q += 1;
+      console.log('user wants to play again.');
+    } else if (question == 'n' || question == 'no') {
+      alert('That\'s to bad.');
+      q += 1;
+      playing = 0;
+      console.log('user does not want to play again.');
+    } else {
+      alert('I\'m afraid that is not an answer, try again.');
+      console.log('user entered an invalid responce.');
+    }
+  }
+  alert('Farewell, I hope you enjoy the site.');
 }
