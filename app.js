@@ -145,7 +145,7 @@ while(playing === 1) {
     } else {
       alert('I\'m afraid you never guessed my favorite number of 11.');
       wrong++;
-      totalWrong++
+      totalWrong++;
       console.log('user got the sixth question wrong.');
     }
   }
