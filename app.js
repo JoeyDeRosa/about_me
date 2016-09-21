@@ -141,12 +141,44 @@ while(playing === 1) {
       i = 4;
       console.log('user got the sixth question right.');
     } else if(i < 3) {
-      alert('I\'m afraid that is not correct, you have ' + 3 - i + ' tries left.');
+        if(question < 11) {
+          alert('I\'m afraid that number is to low, you have ' + (3 - i) + ' tries left.');
+        } else {
+          alert('I\'m afraid that number is to high, you have ' + (3 - i) + ' tries left.');
+        }
     } else {
       alert('I\'m afraid you never guessed my favorite number of 11.');
       wrong++;
       totalWrong++;
       console.log('user got the sixth question wrong.');
+    }
+  }
+
+  var bands = ['the white stripes', 'the rolling stones', 'tigers jaw', 'nirvana', 'slipknot'];
+  for(var i = 0; i < 6, i++) {
+    var question = prompt('Seventh question, can you guess one of my favorite bands. You have six tries.').toLowerCase();
+    var a = 0;
+    for(var x = 0 ; x < bands.length; x + 0) {
+      if(question === bands[x]) {
+        a = band[x];
+        x = bands.length;
+      } else {
+        x++;
+      }
+    }
+    if(question === bands[a]) {
+      alert('Nicely done, ' + bands[x] + ' are/is one of my favorite bands');
+      right++;
+      totalRight++;
+      i = 6;
+      console.log('user got the seventh question right.');
+    } else if(i < 5) {
+        aler('Nope, that is not one of my top five favorite bands. You have ' + (5 - i) + ' tries left');
+    } else {
+      alert('I\'m afraid you never guessed one of my favorite bands. They are ' + bands);
+      wrong++;
+      totalWrong++;
+      console.log('user got the seventh question wrong.');
     }
   }
 
