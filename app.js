@@ -153,7 +153,7 @@ while(playing === 1) {
   }
 
   var bands = ['the white stripes', 'the rolling stones', 'tigers jaw', 'nirvana', 'slipknot'];
-  for(i = 0; i < 6; i++) {
+  for(var i = 0; i < 6; i++) {
     answer = prompt('Seventh question, can you guess one of my favorite bands. You have six tries.').toLowerCase();
     var a = 0;
     for(var x = 0 ; x < 5; x++) {
