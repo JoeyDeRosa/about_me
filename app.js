@@ -43,7 +43,7 @@ while(playing === 1) {
 
   q = 1;
   while(q === 1) {
-    answer = prompt('Would you like to play again? y/n');
+    var answer = prompt('Would you like to play again? y/n');
     if(answer === 'y' || answer === 'yes') {
       alert('Awsome lets get started!');
       q = 0;
@@ -62,6 +62,7 @@ while(playing === 1) {
 
 alert('Farewell, I hope you enjoy the site.');
 function question1() {
+  q = 1;
   while(q === 1) {
     var answer = prompt('First question, was I, Joey DeRosa, born in Washington? y/n').toLowerCase();
     if(answer === 'y' || answer === 'yes') {
@@ -85,7 +86,7 @@ function question1() {
 function question2() {
   q = 1;
   while(q === 1) {
-    answer = prompt('Second qeustion, is pizza my favorite food? y/n').toLowerCase();
+    var answer = prompt('Second qeustion, is pizza my favorite food? y/n').toLowerCase();
     if(answer === 'n' || answer === 'no') {
       alert('Wow, you saw through my trick question. Very impressive.');
       right++;
@@ -107,7 +108,7 @@ function question2() {
 function question3() {
   q = 1;
   while(q === 1) {
-    answer = prompt('Third question, is the car I drive a yellow 2002 ford escape. y/n').toLowerCase();
+    var answer = prompt('Third question, is the car I drive a yellow 2002 ford escape. y/n').toLowerCase();
     if(answer === 'y' || answer === 'yes') {
       alert('Impressive, I do drive a yellow 2002 ford escape. Not sure how you could possibly know that considering I take the bus here.');
       right++;
@@ -129,7 +130,7 @@ function question3() {
 function question4() {
   q = 1;
   while(q === 1) {
-    answer = prompt('Fourth question, is the computer i use for code fellows a Mac. y/n').toLowerCase();
+    var answer = prompt('Fourth question, is the computer i use for code fellows a Mac. y/n').toLowerCase();
     if(answer === 'n' || answer === 'no') {
       alert('Very observent of you, while my laptop is silver like a Mac it is in fact a Google Chromebook running Ubuntu');
       right++;
@@ -151,7 +152,7 @@ function question4() {
 function question5() {
   q = 1;
   while(q === 1) {
-    answer = prompt('Fifth question, and this is a tough one, is my hair red. y/n').toLowerCase();
+    var answer = prompt('Fifth question, and this is a tough one, is my hair red. y/n').toLowerCase();
     if(answer === 'y' || answer === 'yes') {
       alert('Impossible! how could you possibly have known that, I didn\'t think anyone would know that.');
       right++;
@@ -172,7 +173,7 @@ function question5() {
 }
 function question6() {
   for(var i = 0; i < 4; i++) {
-    answer = parseFloat(prompt('Sixth question, can you guess my favorite number, you have four tries.'));
+    var answer = parseFloat(prompt('Sixth question, can you guess my favorite number, you have four tries.'));
     if(answer === 11) {
       alert('Nicely done, my favorite number is 11.');
       right++;
@@ -194,7 +195,7 @@ function question6() {
 function question7() {
   var bands = ['the white stripes', 'the rolling stones', 'tigers jaw', 'nirvana', 'slipknot'];
   for(var i = 0; i < 6; i++) {
-    answer = prompt('Seventh question, can you guess one of my favorite bands. You have six tries.').toLowerCase();
+    var answer = prompt('Seventh question, can you guess one of my favorite bands. You have six tries.').toLowerCase();
     var a = 0;
     for(var x = 0 ; x < 5; x++) {
       if(answer === bands[x]) {
