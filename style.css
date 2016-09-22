@@ -5,29 +5,56 @@ header {
 h1 {
   color: white;
   text-align: center;
+  background-color: blue;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 article {
   background-color: blue;
+  display: inline-block;
+  width: 30%;
+  height: 50%;
+  margin: .5%;
+}
+
+div {
+  margin-top: 100px;
+}
+
+aside {
+  display: inline-block;
+  float: right;
+  margin-right: 30%;
+  text-align: right;
+  font-size: 50px;
+}
+
+section {
+  margin-top: 100px;
 }
 
 h2 {
   color: white;
-  text-align: right;
+  background-color: blue;
+  text-align: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-p {
+h3 {
   color: white;
-  text-align: right;
-  font-family: "Comic Sans MS", cursive, sans-serif
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
 }
 
- img {
-   height: 250px;
-   width: 400px;
-   transform: rotate(270deg);
-   position: relative;
-   top: 100px;
- }
+li {
+  color: white;
+  font-size: 20;
+  text-align: left;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+img {
+  width: 400px;
+  transform: rotate(270deg);
+  position: inherit;
+}
