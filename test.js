@@ -1,64 +1,220 @@
 'use strict';
-var qArray = [];
-function Question(qPrompt, alert1, alert2, answer, wAnswer) {
-  this.qPrompt = qPrompt;
-  this.alert1 = alert1;
-  this.alert2 = alert2;
-  this.answer = answer;
-  this.wAnswer = wAnswer;
-  qArray.push(this);
-}
-var qIndex = 0;
-var totalRight = 0;
-var totalWrong = 0;
-var games = 0;
-
-var user = prompt('What is your name');
-
-do {
-  
-}
-  var right = 0;
-  var wrong = 0;
-  games++;
-
-  function askQuestion(qArray) {
-    var a = prompt(qArray[qIndex].qPrompt).toLowerCase();
-    if(a === qArray[qIndex].answer || a === qArray[qIndex].answer.charAt(0)) {
-      alert(qArray[qIndex].alert1);
-      console.log('user got the ' + (qIndex + 1) + 'question right.');
-      return true;
-    } else if(a === qArray[qIndex].wAnswer || a === qArray[qIndex].wAnswer.charAt(0)) {
-      alert(qArray[qIndex].alert2);
-      console.log(user + ' got the ' + (qIndex + 1) + 'question wrong.');
-      return false;
-    } else {
-      alert('I\'m afraid that is not an answer, try again.');
-      console.log('user entered an invalid responce.');
-    }
-  }
-
-alert('Wow, that was fun!');
-alert('this game you got ' + right + ' right and ' + wrong + ' wrong.');
-alert('In ' + games + ' game(s) you have ' + totalRight + ' right and ' + totalWrong + ' wrong.');
-
-var x = 1;
-while(x == 1) {
-  a = prompt('Would you like to play again?');
-  if(question === 'y' || question === 'yes') {
-    alert('Awsome lets get started!');
-    console.log('user wants to play again.');
-    x++;
-    qIndex = 0;
-  } else if (question === 'n' || question === 'no') {
-    alert('That\'s to bad.');
-    x++;
-    playing = 0;
-    console.log('user does not want to play again.');
+var playing = 0;
+var intro = 1;
+while(intro === 1) {
+  var play = prompt('Do you want to play a guessing game y/n.').toLowerCase();
+  if(play === 'y' || play === 'yes') {
+    alert('Fantastic lets get started!');
+    alert('I am pleased to welcome you to this fantastic game all about me, your score will be tracked and you can play as many times as you like.');
+    playing = 1;
+    intro = 0;
+    console.log('user wants to play.');
+  } else if (play === 'n' || play === 'no') {
+    alert('Well that is a bummer, that\'s all this site was made for.');
+    intro = 0;
+    console.log('user does not want to play.');
   } else {
     alert('I\'m afraid that is not an answer, try again.');
     console.log('user entered an invalid responce.');
   }
 }
 
+var totalRight = 0;
+var totalWrong = 0;
+var games = 0;
+
+while(playing === 1) {
+  games++;
+  var right = 0;
+  var wrong = 0;
+  var q = 1;
+
+  question1();
+  question2();
+  question3();
+  question4();
+  question5();
+  question6();
+  question7();
+
+  alert('Wow, that was fun!');
+  alert('this game you got ' + right + ' right and ' + wrong + ' wrong.');
+  alert('In ' + games + ' game(s) you have ' + totalRight + ' right and ' + totalWrong + ' wrong.');
+
+  q = 1;
+  while(q === 1) {
+    var answer = prompt('Would you like to play again? y/n');
+    if(answer === 'y' || answer === 'yes') {
+      alert('Awsome lets get started!');
+      q = 0;
+      console.log('user wants to play again.');
+    } else if (answer === 'n' || answer === 'no') {
+      alert('That\'s to bad.');
+      q = 0;
+      playing = 0;
+      console.log('user does not want to play again.');
+    } else {
+      alert('I\'m afraid that is not an answer, try again.');
+      console.log('user entered an invalid responce.');
+    }
+  }
+}
+
 alert('Farewell, I hope you enjoy the site.');
+function question1() {
+  q = 1;
+  while(q === 1) {
+    var answer = prompt('First question, was I, Joey DeRosa, born in Washington? y/n').toLowerCase();
+    if(answer === 'y' || answer === 'yes') {
+      alert('That is correct, congratulations! I was born in Tacoma Washington to be exact.');
+      right++;
+      totalRight++;
+      q = 0;
+      console.log('user got the first question right.');
+    } else if (answer === 'n' || answer === 'no') {
+      alert('Ohhhhhh, that is unfortunatly wrong. I was born in Tacoma Washington.');
+      wrong++;
+      totalWrong++;
+      q = 0;
+      console.log('user got the first question wrong.');
+    } else {
+      alert('I\'m afraid that is not an answer, try again.');
+      console.log('user entered an invalid responce.');
+    }
+  }
+}
+function question2() {
+  q = 1;
+  while(q === 1) {
+    var answer = prompt('Second qeustion, is pizza my favorite food? y/n').toLowerCase();
+    if(answer === 'n' || answer === 'no') {
+      alert('Wow, you saw through my trick question. Very impressive.');
+      right++;
+      totalRight++;
+      q = 0;
+      console.log('user got the second question right.');
+    } else if (answer === 'y' || answer === 'yes') {
+      alert('HAHA, trick question. All food is delicious and how dare you expect me to pick a favorite.');
+      wrong++;
+      totalWrong++;
+      q = 0;
+      console.log('user got the second question wrong.');
+    } else {
+      alert('I\'m afraid that is not an answer, try again.');
+      console.log('user entered an invalid responce.');
+    }
+  }
+}
+function question3() {
+  q = 1;
+  while(q === 1) {
+    var answer = prompt('Third question, is the car I drive a yellow 2002 ford escape. y/n').toLowerCase();
+    if(answer === 'y' || answer === 'yes') {
+      alert('Impressive, I do drive a yellow 2002 ford escape. Not sure how you could possibly know that considering I take the bus here.');
+      right++;
+      totalRight++;
+      q = 0;
+      console.log('user got the third question right.');
+    } else if (answer === 'n' || answer === 'no') {
+      alert('I\'m sorry but that is incorect. I was hoping the detail of the question would give away the answer but i guess not.');
+      wrong++;
+      totalWrong++;
+      q = 0;
+      console.log('user got the third question wrong.');
+    } else {
+      alert('I\'m afraid that is not an answer, try again.');
+      console.log('user entered an invalid responce.');
+    }
+  }
+}
+function question4() {
+  q = 1;
+  while(q === 1) {
+    var answer = prompt('Fourth question, is the computer i use for code fellows a Mac. y/n').toLowerCase();
+    if(answer === 'n' || answer === 'no') {
+      alert('Very observent of you, while my laptop is silver like a Mac it is in fact a Google Chromebook running Ubuntu');
+      right++;
+      totalRight++;
+      q = 0;
+      console.log('user got the fourth question right.');
+    } else if (answer === 'y' || answer === 'yes') {
+      alert('That answer is not correct. While my laptop is silver like a Mac it is in fact a Google Chromebook running Ubuntu.');
+      wrong++;
+      totalWrong++;
+      q = 0;
+      console.log('user got the fourth question wrong.');
+    } else {
+      alert('I\'m afraid that is not an answer, try again.');
+      console.log('user entered an invalid responce.');
+    }
+  }
+}
+function question5() {
+  q = 1;
+  while(q === 1) {
+    var answer = prompt('Fifth question, and this is a tough one, is my hair red. y/n').toLowerCase();
+    if(answer === 'y' || answer === 'yes') {
+      alert('Impossible! how could you possibly have known that, I didn\'t think anyone would know that.');
+      right++;
+      totalRight++;
+      q = 0;
+      console.log('user got the fifth question right.');
+    } else if (answer === 'n' || answer === 'no') {
+      alert('You got the last question wrong, but don\'t worry I didn\'t expect anyone to get this question right.');
+      wrong++;
+      totalWrong++;
+      q = 0;
+      console.log('user got the fifth question wrong.');
+    } else {
+      alert('I\'m afraid that is not an answer, try again.');
+      console.log('user entered an invalid responce.');
+    }
+  }
+}
+function question6() {
+  for(var i = 0; i < 4; i++) {
+    var answer = parseFloat(prompt('Sixth question, can you guess my favorite number, you have four tries.'));
+    if(answer === 11) {
+      alert('Nicely done, my favorite number is 11.');
+      right++;
+      totalRight++;
+      i = 4;
+      console.log('user got the sixth question right.');
+    } else if(i < 3 && answer < 11) {
+      alert('I\'m afraid that number is to low, you have ' + (3 - i) + ' trie(s) left.');
+    } else if(i < 3){
+      alert('I\'m afraid that number is to high, you have ' + (3 - i) + ' trie(s) left.');
+    } else {
+      alert('I\'m afraid you never guessed my favorite number of 11.');
+      wrong++;
+      totalWrong++;
+      console.log('user got the sixth question wrong.');
+    }
+  }
+}
+function question7() {
+  var bands = ['the white stripes', 'the rolling stones', 'tigers jaw', 'nirvana', 'slipknot'];
+  for(var i = 0; i < 6; i++) {
+    var answer = prompt('Seventh question, can you guess one of my favorite bands. You have six tries.').toLowerCase();
+    var a = 0;
+    for(var x = 0 ; x < 5; x++) {
+      if(answer === bands[x]) {
+        a = bands[x];
+      }
+    }
+    if(answer === a) {
+      alert('Nicely done, ' + a + ' are/is one of my favorite bands');
+      right++;
+      totalRight++;
+      i = 6;
+      console.log('user got the seventh question right.');
+    } else if(i < 5) {
+      alert('Nope, that is not one of my top five favorite bands. You have ' + (5 - i) + ' trie(s) left');
+    } else {
+      alert('I\'m afraid you never guessed one of my favorite bands. They are ' + bands);
+      wrong++;
+      totalWrong++;
+      console.log('user got the seventh question wrong.');
+    }
+  }
+}

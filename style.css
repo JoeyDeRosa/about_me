@@ -27,6 +27,7 @@ aside {
   margin-right: 30%;
   text-align: right;
   font-size: 50px;
+  margin-bottom: 300;
 }
 
 section {
@@ -56,5 +57,5 @@ li {
 img {
   width: 400px;
   transform: rotate(270deg);
-  position: inherit;
+  float: left;
 }
